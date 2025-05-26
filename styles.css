@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 32px 28px 24px 28px;
+    border-radius: 16px;
+    width: 370px;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+    margin-top: 40px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #6c2eb7;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.2s;
+  }
+  
+  input:focus, select:focus {
+    border: 1.5px solid #6c2eb7;
+  }
+  
+  button {
+    width: 48%;
+    padding: 12px;
+    background: linear-gradient(90deg, #6c2eb7 60%, #7f53ac 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 12px;
+    margin-right: 2%;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.07);
+  }
+  
+  button:last-of-type {
+    margin-right: 0;
+    background: #e53e3e;
+  }
+  
+  button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.13);
+  }
+  
+  #weekdays {
+    margin-top: 18px;
+  }
+  
+  #weekdays h3 {
+    margin: 18px 0 6px 0;
+    color: #6c2eb7;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  li {
+    background: #f7f7fa;
+    margin: 6px 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    display: flex;              /* Make li a flex container */
+    align-items: center;
+    transition: background 0.2s, opacity 0.2s;
+    cursor: pointer;
+    gap: 10px;                  /* Space between text and button */
+  }
+  
+  li span {
+    flex: 1;                    /* Make the text take up available space */
+    word-break: break-word;     /* Allow long words to wrap */
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.5;
+    background: #e9e9f3;
+    position: relative;
+  }
+  
+  li.completed::before {
+    content: "✔";
+    color: #38a169;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+  
+  li.completed:hover::after {
+    content: "Completed";
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #6c2eb7;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    white-space: nowrap;
+  }
+  
+  li button {
+    /* Remove position: absolute and related properties */
+    background: #e53e3e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.95em;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: background 0.2s, opacity 0.2s;
+    margin-left: 8px;
+  }
+  
+  li button:hover {
+    background: #c53030;
+    opacity: 1;
+  }

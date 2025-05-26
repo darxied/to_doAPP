@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task..." />
+    <select id="weekdaySelect">
+      <option value="sunday">Sunday</option>
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="clearTasks()">Clear All</button>
+    <div id="weekdays">
+      <h3>Sunday</h3>
+      <ul id="sunday"></ul>
+      <h3>Monday</h3>
+      <ul id="monday"></ul>
+      <h3>Tuesday</h3>
+      <ul id="tuesday"></ul>
+      <h3>Wednesday</h3>
+      <ul id="wednesday"></ul>
+      <h3>Thursday</h3>
+      <ul id="thursday"></ul>
+      <h3>Friday</h3>
+      <ul id="friday"></ul>
+      <h3>Saturday</h3>
+      <ul id="saturday"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
